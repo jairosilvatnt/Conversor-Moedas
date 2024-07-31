@@ -23,9 +23,8 @@ function CurrencyConvert() {
   }, []);
 
 
-  //
+  // se a contação "da moeda" &&  cotaçao "para a moeda"  
   useEffect(() => {
-    // se a contação "da moeda" &&  cotaçao "para a moeda"
     if (rates[fromCurrency] && rates[toCurrency]) {
       const conversionRate = rates[toCurrency] / rates[fromCurrency];
       setConvertedAmount((amount * conversionRate).toFixed(2));
